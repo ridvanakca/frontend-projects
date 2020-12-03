@@ -1,0 +1,64 @@
+@import "variables";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: $color;
+    font-family: $font-stack;
+    color: #fff;
+}
+
+.wrapper {
+    padding: 50px;
+}
+
+.image-wrapper {
+    width: 50%;
+    img {
+        width: 100%;
+    }
+}
+
+.left {
+    margin-top: 20px;
+    img {
+        width: 100%;
+    }
+}
+
+.right {
+    margin-top: 20px;
+    text-align: center;
+
+    p{
+        margin: 15px 0;
+    }
+
+    button {
+        border: none;
+        border-radius: 50px;
+        padding: 15px;
+        color: $color;
+        width: 12rem;
+        cursor: pointer;
+    }
+}
+
+.icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 10px;
+    a {
+        margin: 0 5px;
+        color: #fff;
+        font-size: 2rem;
+    }
+}
+
+@import "desktop";

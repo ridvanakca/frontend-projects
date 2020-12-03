@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #674baf;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.wrapper {
+  padding: 50px;
+}
+
+.image-wrapper {
+  width: 50%;
+}
+
+.image-wrapper img {
+  width: 100%;
+}
+
+.left {
+  margin-top: 20px;
+}
+
+.left img {
+  width: 100%;
+}
+
+.right {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.right p {
+  margin: 15px 0;
+}
+
+.right button {
+  border: none;
+  border-radius: 50px;
+  padding: 15px;
+  color: #674baf;
+  width: 12rem;
+  cursor: pointer;
+}
+
+.icons {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.icons a {
+  margin: 0 5px;
+  color: #fff;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 960px) {
+  body {
+    min-height: 100vh;
+  }
+  .wrapper {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "img ." "content content" ". icon";
+    padding: 50px;
+  }
+  .image-wrapper {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: img;
+    width: 60%;
+  }
+  .content {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .left {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin-right: 20px;
+  }
+  .right {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    text-align: left;
+    margin-left: 20px;
+  }
+  .right p {
+    font-size: 1rem;
+    margin: 30px 0;
+  }
+  .icons {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: icon;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+  }
+}
