@@ -1,0 +1,81 @@
+@media screen and (min-width: 960px) {
+
+    body {
+        background: url('../images/bg-pattern-top-desktop.svg');
+        background-repeat: no-repeat;
+        background-position: top left;
+    }
+
+    .container {
+        margin: 80px 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "left right"
+        "bottom bottom";
+        grid-gap: 50px;
+
+    }
+
+    .top-left {
+        grid-area: left;
+        text-align: left;
+        margin: 0 10px;
+    }
+
+    .top-right {
+        grid-area: right;
+        margin-right: 10px;
+        .stars {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 2.5rem;
+
+            & > div {
+                padding: 0;
+            }
+
+            &:nth-child(1) {
+                position: relative;
+                left: -40px;
+            }
+
+            &:nth-child(2) {
+                position: relative;
+                left: -20px;
+            }
+
+            &:nth-child(3) {
+                position: relative;
+                left: 0;
+            }
+
+            
+        }
+    }
+
+    .bottom {
+        grid-area: bottom;
+        display: flex;
+
+        .card {
+            margin: 0 10px;
+        }
+
+        .card:nth-child(1) {
+            position: relative;
+            top: -40px;
+        }
+
+        .card:nth-child(2) {
+            position: relative;
+            top: -20px;
+        }
+
+        .card:nth-child(3) {
+            position: relative;
+            top: 0;
+        }
+    }
+}
