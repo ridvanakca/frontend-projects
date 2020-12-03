@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+$strong-cyan: hsl(171, 66%, 44%);
+$light-blue: hsl(233, 100%, 69%);
+$dark-grayish-blue: hsl(210, 10%, 33%);
+$grayish-blue: hsl(201, 11%, 66%);
+
+$font-stack: 'Bai Jamjuree', sans-serif;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-stack;
+    color: $grayish-blue;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-green {
+    background-color: $strong-cyan;
+}
+
+.btn-blue {
+    background-color: $light-blue;
+}
+
+
+header {
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .company-logo {
+        width: 25%;
+        
+        img {
+            width: 100%;
+        }
+    }
+    
+    .header-title {
+        margin-top: 40px;
+        color: $dark-grayish-blue;
+    }
+
+    .header-description {
+        margin: 20px;
+    }
+
+    .button-flex {
+        width: 100%;
+    }
+
+}
+
+main {
+    padding: 20px;
+
+    section {
+        margin-bottom: 20px;
+    }
+    
+    .snippet-section {
+        text-align: center;
+
+        .snippet-title {
+            color: $dark-grayish-blue;
+            margin-bottom: 20px;
+        }
+
+        .cmp-image {
+            width: 80%;
+            margin: 40px auto;
+            img {
+                width: 100%;
+            }
+        }
+
+        .snippet-content {
+            margin: 20px 0;
+            h3 {
+                color: $dark-grayish-blue;
+                margin-bottom: 10px;
+            }
+            
+        }
+    }
+
+    .access-section {
+        text-align: center;
+
+        .access-title {
+            color: $dark-grayish-blue;
+            margin-bottom: 20px;
+        }
+
+        .devices-image {
+            width: 90%;
+            margin: 40px auto;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .workflow-section {
+        text-align: center;
+
+        .workflow-title {
+            color: $dark-grayish-blue;
+            margin-bottom: 20px;
+        }
+
+        .workflow-flex {
+            margin: 40px 0;
+            
+            img {
+                margin: 20px 0;
+            }
+
+            .workflow-flex-title {
+                color: $dark-grayish-blue;
+                margin-bottom: 10px;
+            }
+        }
+
+    }
+
+    .partners-logo-section {
+
+        img {
+            display: block;
+            margin: 60px auto;
+        }
+    }
+
+    .store-section {
+        text-align: center;
+
+        .store-title {
+            color: $dark-grayish-blue;
+            margin-bottom: 20px;
+        }
+
+        .store-description {
+            margin-bottom: 20px;
+        }
+
+    }
+}
+
+footer {
+    background-color: $grayish-blue;
+    padding: 20px;
+    text-align: center;
+
+    .footer-logo {
+        width: 20%;
+        margin: 0 auto;
+        img {
+            width: 100%;
+        }
+    }
+    .footer-links {
+        list-style: none;
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            margin: 20px 0;
+        }
+    }
+    .footer-icons {
+        img {
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        
+    }
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        background: url('../images/bg-header-desktop.png') no-repeat;
+       
+    }
+
+    .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    
+    header {
+        .company-logo{
+            width: 25%;
+            margin: 0 auto;
+        }
+        .header-description {
+            margin: 20px auto;
+        }
+        .button-flex {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        button {
+            margin: 0 10px;
+            width: 30%;
+        }
+    }
+
+    main {
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        .snippet-section {
+
+            .snippet-description {
+                margin: 0 auto;
+            }
+            
+            .snippet-flex {
+                display: flex;
+                margin: 10px 0;
+
+                .cmp-image {
+                    margin-right: 20px;
+                    flex-basis: 50%;
+                }
+
+                .snippet-container {
+                    flex-basis: 50%;
+                    padding: 20px 10px;
+                    .snippet-content {
+                        text-align: left;
+                       
+                    }
+                }
+
+            }
+        }
+
+        .access-section {
+         
+            .devices-image {
+                width: 70%;
+            }
+        }
+
+        .workflow-section {
+
+            .workflow-flex {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .flex-item {
+                flex-basis: 25%;
+            }
+            
+        
+        }
+
+        .partners-logo-section {
+            display: flex;
+        }
+
+        .store-section {
+            .store-description {
+                margin: 30px auto;
+            }
+            .button-flex {
+                display: flex;
+                justify-content: center;
+            }
+            button {
+                width: 30%;
+                margin: 0 10px;
+            }
+        }
+        
+    }
+
+    footer {
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 100px;
+        .footer-logo {
+            margin: 0;
+            width: 10%;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                margin: 0;
+                flex-basis: 33%;
+                padding: 10px;
+            }
+        }
+
+        
+    }
+}

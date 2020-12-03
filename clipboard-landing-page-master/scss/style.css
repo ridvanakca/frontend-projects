@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  color: #9fabb2;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-green {
+  background-color: #26baa4;
+}
+
+.btn-blue {
+  background-color: #6173ff;
+}
+
+header {
+  padding: 20px;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+header .company-logo {
+  width: 25%;
+}
+
+header .company-logo img {
+  width: 100%;
+}
+
+header .header-title {
+  margin-top: 40px;
+  color: #4c545d;
+}
+
+header .header-description {
+  margin: 20px;
+}
+
+header .button-flex {
+  width: 100%;
+}
+
+main {
+  padding: 20px;
+}
+
+main section {
+  margin-bottom: 20px;
+}
+
+main .snippet-section {
+  text-align: center;
+}
+
+main .snippet-section .snippet-title {
+  color: #4c545d;
+  margin-bottom: 20px;
+}
+
+main .snippet-section .cmp-image {
+  width: 80%;
+  margin: 40px auto;
+}
+
+main .snippet-section .cmp-image img {
+  width: 100%;
+}
+
+main .snippet-section .snippet-content {
+  margin: 20px 0;
+}
+
+main .snippet-section .snippet-content h3 {
+  color: #4c545d;
+  margin-bottom: 10px;
+}
+
+main .access-section {
+  text-align: center;
+}
+
+main .access-section .access-title {
+  color: #4c545d;
+  margin-bottom: 20px;
+}
+
+main .access-section .devices-image {
+  width: 90%;
+  margin: 40px auto;
+}
+
+main .access-section .devices-image img {
+  width: 100%;
+}
+
+main .workflow-section {
+  text-align: center;
+}
+
+main .workflow-section .workflow-title {
+  color: #4c545d;
+  margin-bottom: 20px;
+}
+
+main .workflow-section .workflow-flex {
+  margin: 40px 0;
+}
+
+main .workflow-section .workflow-flex img {
+  margin: 20px 0;
+}
+
+main .workflow-section .workflow-flex .workflow-flex-title {
+  color: #4c545d;
+  margin-bottom: 10px;
+}
+
+main .partners-logo-section img {
+  display: block;
+  margin: 60px auto;
+}
+
+main .store-section {
+  text-align: center;
+}
+
+main .store-section .store-title {
+  color: #4c545d;
+  margin-bottom: 20px;
+}
+
+main .store-section .store-description {
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #9fabb2;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .footer-logo {
+  width: 20%;
+  margin: 0 auto;
+}
+
+footer .footer-logo img {
+  width: 100%;
+}
+
+footer .footer-links {
+  list-style: none;
+}
+
+footer .footer-links a {
+  text-decoration: none;
+}
+
+footer .footer-links li {
+  margin: 20px 0;
+}
+
+footer .footer-icons img {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    background: url("../images/bg-header-desktop.png") no-repeat;
+  }
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  header .company-logo {
+    width: 25%;
+    margin: 0 auto;
+  }
+  header .header-description {
+    margin: 20px auto;
+  }
+  header .button-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  header button {
+    margin: 0 10px;
+    width: 30%;
+  }
+  main section {
+    margin-bottom: 20px;
+  }
+  main .snippet-section .snippet-description {
+    margin: 0 auto;
+  }
+  main .snippet-section .snippet-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 10px 0;
+  }
+  main .snippet-section .snippet-flex .cmp-image {
+    margin-right: 20px;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  main .snippet-section .snippet-flex .snippet-container {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    padding: 20px 10px;
+  }
+  main .snippet-section .snippet-flex .snippet-container .snippet-content {
+    text-align: left;
+  }
+  main .access-section .devices-image {
+    width: 70%;
+  }
+  main .workflow-section .workflow-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .workflow-section .flex-item {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+  main .partners-logo-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .store-section .store-description {
+    margin: 30px auto;
+  }
+  main .store-section .button-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .store-section button {
+    width: 30%;
+    margin: 0 10px;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 100px;
+  }
+  footer .footer-logo {
+    margin: 0;
+    width: 10%;
+  }
+  footer .footer-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer .footer-links li {
+    margin: 0;
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+    padding: 10px;
+  }
+}
