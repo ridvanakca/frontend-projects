@@ -9,6 +9,7 @@ import { Todo } from '../todo';
 export class TodosComponent implements OnInit {
 
   todos: Todo[];
+  inputTodo: string;
 
   constructor() { }
 
@@ -20,9 +21,31 @@ export class TodosComponent implements OnInit {
       },
       {
         content: 'second todo',
-        completed: true
+        completed: false
       }
     ]
+  }
+
+  addToDo() {
+    this.todos.push({
+      content: this.inputTodo,
+      completed: false
+    })
+
+    this.inputTodo = '';
+  }
+
+  deleteTodo(id: number) {
+    this.todos = this.todos.filter((todo, index) => index !== id)
+  }
+
+  toggleCompleted(id: number) {
+    this.todos.map((todo, index) => {
+      if(index == id) {
+        todo.completed = !todo.completed;
+      }
+      return todo;
+    })
   }
 
 }

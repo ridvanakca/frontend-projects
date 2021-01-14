@@ -43,16 +43,26 @@
     border-bottom: 1px solid #fff;
 }
 
+.todo-container.done .todo-content {
+    text-decoration: line-through;
+}
+
 .todo {
     width: 25%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
+
 
 .todo-check {
     width: 15px;
     height: 15px;
+    margin-right: 20px;
+}
+
+.todo-content {
+    width: 70%;
+    text-align: left;
 }
 
 .deleteTodo {
@@ -64,4 +74,9 @@
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.deleteTodo:hover {
+    color: red;
+    background-color: #fff;
 }

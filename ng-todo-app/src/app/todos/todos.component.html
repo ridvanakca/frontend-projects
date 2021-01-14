@@ -4,17 +4,18 @@
       </header>
 
     <div class="input-container">
-        <input class="inputTodo" type="text" placeholder="What needs to be done?">
-        <button class="addBtn">Add</button>
+        <input class="inputTodo" type="text" placeholder="What needs to be done?" [(ngModel)]="inputTodo">
+        <button class="addBtn" (click)='addToDo()'>Add</button>
     </div>
 
     <h2 class="todo-title">ToDo List</h2>
-    <div class="todo-container" *ngFor="let todo of todos; let i = index;">
+    <div class="todo-container" *ngFor="let todo of todos; let i = index" [class.done]='todo.completed'>
         <div class="todo">
-            <input class="todo-check" type="checkbox" name="todo-check">
+            <input class="todo-check" type="checkbox" name="todo-check" (click)='toggleCompleted(i)'>
             <div class="id">{{ i+1 }}</div>
-            <p class="content">{{ todo.content }}</p>
         </div>
-        <button class="deleteTodo">x</button>
+            <p class="todo-content">{{ todo.content }}</p>
+        
+        <button class="deleteTodo" (click)='deleteTodo(i)'>x</button>
     </div>
 </div>
