@@ -9,11 +9,11 @@
     </div>
 
     <h2 class="todo-title">ToDo List</h2>
-    <div class="todo-container">
+    <div class="todo-container" *ngFor="let todo of todos; let i = index;">
         <div class="todo">
             <input class="todo-check" type="checkbox" name="todo-check">
-            <div class="id">1</div>
-            <p class="content">first todo</p>
+            <div class="id">{{ i+1 }}</div>
+            <p class="content">{{ todo.content }}</p>
         </div>
         <button class="deleteTodo">x</button>
     </div>
