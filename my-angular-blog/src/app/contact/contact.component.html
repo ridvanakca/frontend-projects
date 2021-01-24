@@ -1,0 +1,59 @@
+<section class="hero is-fullheight-with-navbar is-bold">
+    <div class="hero-body p-2">
+      <div class="container">
+        <div class="columns is-vcentered is-multiline">
+          <div class="column is-7">
+            <h1 class="title">Contact Me!</h1>
+            <form (ngSubmit)='submitForm()' novalidate [formGroup]="blogForm">
+                <div class="field">
+                    <label class="label">Name</label>
+                    <div class="control">
+                      <input class="input ng-invalid" type="text" formControlName="name" [ngClass]="{'is-danger': !blogForm.get('name').valid && blogForm.get('name').touched}" > 
+                      <div *ngIf="blogForm.get('name').invalid && (blogForm.get('name').dirty || blogForm.get('name').touched)" class="help is-danger">
+                        <div *ngIf="blogForm.get('name').errors?.required">
+                          Name is required.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control">
+                      <input class="input" 
+                             type="email" 
+                             formControlName="email"
+                             [ngClass]="{'is-danger': (blogForm.get('email').touched || blogForm.get('email').dirty) && !blogForm.get('email').valid}" />
+                      <div *ngIf="blogForm.get('email').invalid && (blogForm.get('email').dirty || blogForm.get('email').touched)" class="help is-danger">
+                        <div *ngIf="blogForm.get('email').errors?.required">
+                          Email is required.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">Your Message</label>
+                    <div class="control">
+                      <textarea class="textarea" formControlName="message"  [ngClass]="{'is-danger': !blogForm.get('message').valid && blogForm.get('message').touched}"></textarea>
+                      <div *ngIf="blogForm.get('message').invalid && (blogForm.get('message').dirty || blogForm.get('message').touched)" class="help is-danger">
+                        <div *ngIf="blogForm.get('message').errors?.required">
+                          Your Message is required.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <button class="button is-medium is-warning" 
+                        [disabled]="!blogForm.valid"
+                        type='submit'
+                        [title]="blogForm.valid ? 'Save your entered data!' : 'Disabled until the form data is valid'"
+                        >Send</button>
+            </form>
+          </div>
+          <div class="column is-half-mobile is-centered-mobile is-offset-one-quarter-mobile is-5">
+            <figure class="image">
+              <img src="../../assets/letter.png">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
