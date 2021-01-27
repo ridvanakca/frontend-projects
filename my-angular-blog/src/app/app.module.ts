@@ -1,3 +1,4 @@
+import { PostsModule } from './posts/posts.module';
 import { environment } from '../environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
@@ -9,6 +10,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { AngularFireModule } from '@angular/fire';
     AppRoutingModule,
     CoreModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    PostsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,32 @@
+
+<section class="section is-fullheight-with-navbar">
+  <div class="container">
+    <h3 class="title has-text-centered is-size-4">Blog Posts</h3>
+    <div class="columns mt-5 is-multiline">
+      <div class="column is-4-tablet" *ngFor="let post of posts">
+        <div class="card">
+          <div class="card-image has-text-centered">
+            <figure class="image">
+              <img src="../../../assets/contactus.png" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">{{ post.title }}</p>
+                <time>{{ post.published.seconds * 1000 | date:'short' }}</time>
+                <!-- <time>{{ post.published.seconds * 1000 | date:'mediumDate' }}</time> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
