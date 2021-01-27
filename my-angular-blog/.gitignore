@@ -2,12 +2,8 @@
 
 
 # firebase
-/src/environments
 
-/src/environments/
-
-/src/environments/environment.ts
-/src/environments/environment.prod.ts
+environments/
 
 # compiled output
 /dist
