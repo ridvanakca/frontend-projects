@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "my-ng-blog": {
+      "hosting": {
+        "my-angular-blog": [
+          "my-ng-blog"
+        ]
+      }
+    }
+  }
+}
