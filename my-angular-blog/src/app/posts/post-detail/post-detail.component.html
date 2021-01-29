@@ -1,1 +1,7 @@
 <p>post-detail works!</p>
+<section class="section">
+    <div class="container" *ngIf="post">
+        <h1 class="title">{{post.title}}</h1>
+        <p class="subtite">{{post.content}}</p>
+    </div>
+</section>

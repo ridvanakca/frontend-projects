@@ -6,7 +6,7 @@ import { PostListComponent } from './post-list/post-list.component';
 
 const routes: Routes= [
   { path: 'blog', component: PostListComponent },
-  { path: 'blog:id', component: PostDetailComponent}
+  { path: 'blog/:id', component: PostDetailComponent}
 ]
 
 @NgModule({

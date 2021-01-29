@@ -3,7 +3,7 @@
   <div class="container">
     <h3 class="title has-text-centered is-size-4">Blog Posts</h3>
     <div class="columns mt-5 is-multiline">
-      <div class="column is-4-tablet" *ngFor="let post of posts">
+      <div class="column is-4-tablet" *ngFor="let post of posts | async">
         <div class="card">
           <div class="card-image has-text-centered">
             <figure class="image">
@@ -13,7 +13,8 @@
           <div class="card-content has-text-centered">
             <div class="media">
               <div class="media-content">
-                <p class="title is-4">{{ post.title }}</p>
+                <!-- <p routerLink="{{post.title}}" routerLinkActive="router-link-active"  class="title is-4">{{ post.title }}</p> -->
+                <p routerLink="{{post.id}}" routerLinkActive="router-link-active"  class="title is-4">{{ post.title }}</p>
                 <time>{{ post.published.seconds * 1000 | date:'short' }}</time>
                 <!-- <time>{{ post.published.seconds * 1000 | date:'mediumDate' }}</time> -->
               </div>
