@@ -4,5 +4,5 @@ export class Post {
     title: string;
     content: string;
     published: Date;
-    // image: string
+    img: string
 }

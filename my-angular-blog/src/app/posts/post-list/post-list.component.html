@@ -3,23 +3,35 @@
   <div class="container">
     <h3 class="title has-text-centered is-size-4">Blog Posts</h3>
     <div class="columns mt-5 is-multiline">
-      <div class="column is-4-tablet" *ngFor="let post of posts | async">
+      <div class="column  is-12" *ngFor="let post of posts | async">
         <div class="card">
-          <div class="card-image has-text-centered">
-            <figure class="image">
-              <img src="../../../assets/contactus.png" alt="Placeholder image">
-            </figure>
-          </div>
-          <div class="card-content has-text-centered">
-            <div class="media">
-              <div class="media-content">
-                <!-- <p routerLink="{{post.title}}" routerLinkActive="router-link-active"  class="title is-4">{{ post.title }}</p> -->
-                <p routerLink="{{post.id}}" routerLinkActive="router-link-active"  class="title is-4">{{ post.title }}</p>
-                <time>{{ post.published.seconds * 1000 | date:'short' }}</time>
-                <!-- <time>{{ post.published.seconds * 1000 | date:'mediumDate' }}</time> -->
-              </div>
+          <div class="card-content">  
+              <article class="media">
+                <div class="media-left">
+              <figure class="image is-128x128">
+                <!-- <img src="../../../assets/site-content.png"> -->
+                <img class="is-rounded" src={{post.img}}>
+              </figure>
             </div>
+              <div class="media-content ml-5">
+                <div class="content">
+                  <p class="is-size-5">
+                     <strong>{{ post.title }}</strong>
+                    </p>
+              </div>
+            <nav class="level is-mobile">
+              <div class="level-left">
+                <a class="level-item">
+                  <span class="is-clickable" routerLink="{{post.id}}" routerLinkActive="router-link-active">Learn more.</span>
+                </a>
+              </div>
+            </nav>
           </div>
+          <div class="media-right is-hide-mobile">
+            <small><time>{{ post.published.seconds * 1000 | date:'short' }}</time></small><br>
+          </div>
+        </article>
+    </div>
         </div>
       </div>
     </div>

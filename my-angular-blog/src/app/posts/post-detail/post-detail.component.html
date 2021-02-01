@@ -1,7 +1,10 @@
-<p>post-detail works!</p>
 <section class="section">
     <div class="container" *ngIf="post">
         <h1 class="title">{{post.title}}</h1>
-        <p class="subtite">{{post.content}}</p>
+        <time>{{ post.published.seconds * 1000 | date:'short' }}</time>    
+        <figure class="image mt-5 mb-5">
+            <img src={{post.img}} alt="Placeholder image">
+        </figure>
+        <p>{{post.content}}</p>
     </div>
 </section>
