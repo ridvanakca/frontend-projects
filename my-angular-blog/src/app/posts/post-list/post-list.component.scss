@@ -5,3 +5,13 @@
 .is-height {
     height: 200px;
 }
+
+.m-center {
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .m-5-tablet {
+        margin: 10px;
+    }
+}

@@ -2,33 +2,33 @@
 <section class="section is-fullheight-with-navbar">
   <div class="container">
     <h3 class="title has-text-centered is-size-4">Blog Posts</h3>
-    <div class="columns mt-5 is-multiline">
-      <div class="column  is-12" *ngFor="let post of posts | async">
+    <div class="columns is-mobile mt-5 is-multiline">
+      <div class="column is-12" *ngFor="let post of posts | async">
         <div class="card">
           <div class="card-content">  
-              <article class="media">
-                <div class="media-left">
-              <figure class="image is-128x128">
+              <article class="media is-block-mobile has-text-centered-mobile">
+                <div class="media-left mr-0 mb-2">
+              <figure class="image m-center is-128x128">
                 <!-- <img src="../../../assets/site-content.png"> -->
                 <img class="is-rounded" src={{post.img}}>
               </figure>
             </div>
-              <div class="media-content ml-5">
-                <div class="content">
+            <div class="media-content has-text-centered-mobile m-5-tablet">
+              <div class="content">
                   <p class="is-size-5">
                      <strong>{{ post.title }}</strong>
                     </p>
               </div>
-            <nav class="level is-mobile">
-              <div class="level-left">
-                <a class="level-item">
-                  <span class="is-clickable" routerLink="{{post.id}}" routerLinkActive="router-link-active">Learn more.</span>
-                </a>
-              </div>
-            </nav>
-          </div>
-          <div class="media-right is-hide-mobile">
-            <small><time>{{ post.published.seconds * 1000 | date:'short' }}</time></small><br>
+              <nav class="level has-text-centered-mobile">
+                <div class="level-left">
+                  <a class="level-item">
+                    <span class="is-clickable" routerLink="{{post.id}}" routerLinkActive="router-link-active">Learn more.</span>
+                  </a>
+                </div>
+              </nav>
+            </div>
+          <div class="media-right-tablet is-hide-mobile has-text-centered-mobile ml-1">
+            <small><time>{{ post.published.seconds * 1000 | date:'mediumDate' }}</time></small><br>
           </div>
         </article>
     </div>

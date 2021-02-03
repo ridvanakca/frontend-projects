@@ -2,7 +2,7 @@
     <div class="container" *ngIf="post">
         <h1 class="title">{{post.title}}</h1>
         <time>{{ post.published.seconds * 1000 | date:'short' }}</time>    
-        <figure class="image mt-5 mb-5">
+        <figure class="image mt-5 mb-5 is-detail-image-size">
             <img src={{post.img}} alt="Placeholder image">
         </figure>
         <p>{{post.content}}</p>
