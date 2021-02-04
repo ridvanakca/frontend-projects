@@ -10,8 +10,21 @@
     margin: 0 auto;
 }
 
+.btn {
+    background-color: #5559ab;
+    border: 2px solid #5559ab;
+    color: #fff;
+    outline: 2px solid #fff;
+    transition: outline-offset 100ms ease;
+}
+
+.btn:hover,
+.btn:focus {
+    outline-offset: -4px ;
+}
+
 @media (min-width: 768px) {
-    .m-5-tablet {
-        margin: 10px;
+    .m-15-tablet {
+        margin: 15px;
     }
 }
