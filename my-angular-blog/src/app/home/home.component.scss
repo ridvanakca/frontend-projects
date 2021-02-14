@@ -1,19 +1,20 @@
-.icon {
-    background-color: #d5f7e6;
-    border: 2px solid #d5f7e6;
-    color: #000000;
-    outline: 2px solid #fff;
-    transition: outline-offset 100ms ease;
-    display: flex;
-}
-
-.icon:hover {
-    outline-offset: -4px ;
-}
-
 .icons {
     display: flex;
     justify-content: center;
+
+    .icon {
+        background-color: #d5f7e6;
+        border: 2px solid #d5f7e6;
+        color: #000000;
+        outline: 2px solid #fff;
+        transition: outline-offset 100ms ease;
+        display: flex;
+
+        &:hover {
+            outline-offset: -4px ;
+        }
+    }
+
 }
 
 

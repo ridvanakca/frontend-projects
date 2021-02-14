@@ -1,4 +1,3 @@
-import { User } from './../user';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
@@ -11,8 +10,7 @@ export class ContactComponent implements OnInit {
 
   // this root form group defines our form model
   blogForm: FormGroup;
-  // data model
-  blogUser: User;
+  
 
   constructor( private fb: FormBuilder) { }
 

@@ -4,9 +4,11 @@
     color: #fff;
     outline: 2px solid #fff;
     transition: outline-offset 100ms ease;
+
+    &:hover,
+    &:focus {
+        outline-offset: -4px ;
+    }
+
 }
 
-.btn:hover,
-.btn:focus {
-    outline-offset: -4px ;
-}

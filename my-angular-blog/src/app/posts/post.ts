@@ -1,6 +1,4 @@
-import { Timestamp } from "rxjs";
-
-export class Post {
+export interface Post {
     title: string;
     content: string;
     published: Date;
