@@ -11,12 +11,12 @@ import { Observable } from 'rxjs';
 })
 export class PostListComponent implements OnInit {
 
-  posts: Observable<Post[]>;
+  posts: Post[];
   
   constructor(private postsService: PostService) { }
 
   ngOnInit(): void {
-    this.posts = this.postsService.getPosts();
+    this.postsService.getPosts().subscribe(data => this.posts = data);
   }
   
 }
