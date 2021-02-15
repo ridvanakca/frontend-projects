@@ -1,13 +1,10 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PostDetailComponent } from './post-detail/post-detail.component';
 import { PostListComponent } from './post-list/post-list.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
-const routes: Routes= [
-  { path: 'blog', component: PostListComponent },
-  { path: 'blog/:id', component: PostDetailComponent}
-]
+
 
 @NgModule({
   declarations: [
@@ -16,7 +13,7 @@ const routes: Routes= [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule
   ]
 })
 export class PostsModule { }
