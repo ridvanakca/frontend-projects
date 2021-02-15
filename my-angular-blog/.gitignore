@@ -4,6 +4,7 @@
 # firebase
 
 environments/
+*.firebase 
 
 # compiled output
 /dist
