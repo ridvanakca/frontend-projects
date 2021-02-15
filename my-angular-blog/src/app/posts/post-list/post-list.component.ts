@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class PostListComponent implements OnInit {
 
-  posts: Post[];
+  public posts: Post[];
   
   constructor(private postsService: PostService) { }
 
