@@ -10,7 +10,7 @@ export class ContactComponent implements OnInit {
 
   // this root form group defines our form model
   public blogForm: FormGroup;
-  
+
 
   constructor( private fb: FormBuilder) { }
 
@@ -21,13 +21,13 @@ export class ContactComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       message: ['', [Validators.required]]
     })
-
+    
   }
 
   notIncludeNumber(c: AbstractControl): { [key: string]: boolean } | null {
     let regex = /^[A-Za-z]+$/;
-    if( !regex.test(c.value) ) {
-      return {'letters': true}; //invalid
+    if( !regex.test(c.value) && c.dirty ) {
+      return {'letters': true }; //invalid
     }
     return null; //valid
   }

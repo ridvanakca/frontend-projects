@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,15 +7,13 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @ViewChild('navMenu') navMenu: ElementRef;
+
+  toggle: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  toggleNavbar() {
-    this.navMenu.nativeElement.classList.toggle('is-active');
-  }
   
 }

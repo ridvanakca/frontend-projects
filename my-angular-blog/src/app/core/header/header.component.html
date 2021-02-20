@@ -1,19 +1,23 @@
 <nav class="navbar is-transparent py-1 px-1">
-    <div class="container">
+  <div class="container">
     <div class="navbar-brand is-size-4">
-        <a routerLink="/" routerLinkActive="active" class="navbar-item">rido.</a>
-        <a class="navbar-burger" (click)="toggleNavbar()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </a>
+      <a routerLink="/" routerLinkActive="active" class="navbar-item">rido.</a>
+      <a class="navbar-burger" (click)="toggle = !toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
     </div>
-    <div class="navbar-menu is-mobile" #navMenu>
-        <div class="navbar-end">
-            <a routerLink="/" routerLinkActive="active" class="navbar-item">Home</a>
-            <a routerLink="/contact" routerLinkActive="active" class="navbar-item">Contact</a>
-            <a routerLink="/blog" routerLinkActive="active" class="navbar-item">Blog</a>
-        </div>
+    <div class="navbar-menu is-mobile" [ngClass]="{ 'is-active': toggle }">
+      <div class="navbar-end">
+        <a routerLink="/" routerLinkActive="active" class="navbar-item">Home</a>
+        <a routerLink="/contact" routerLinkActive="active" class="navbar-item"
+          >Contact</a
+        >
+        <a routerLink="/blog" routerLinkActive="active" class="navbar-item"
+          >Blog</a
+        >
+      </div>
     </div>
-    </div>
+  </div>
 </nav>
